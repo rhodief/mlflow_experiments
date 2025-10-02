@@ -1,0 +1,2 @@
+RUN curl -fkL https://nexus.stj.jus.br/repository/raw-release/devops/certificados/update-ca-stj.sh | bash
+ENV REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt

@@ -1,0 +1,7 @@
+mlflow*
+.ipynb_checkpoints
+__pycache__/
+*.pyc
+mlruns
+src/atividade_1/students.csv
+src/atividade_1/modelo_atividade01.onnx

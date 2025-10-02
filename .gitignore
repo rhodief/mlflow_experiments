@@ -1,7 +1,9 @@
-mlflow*
-.ipynb_checkpoints
+*.log
+mlflow_data/
 __pycache__/
 *.pyc
-mlruns
-src/atividade_1/students.csv
-src/atividade_1/modelo_atividade01.onnx
+.env
+.DS_Store
+.vscode/
+*.csv
+*/logs/
