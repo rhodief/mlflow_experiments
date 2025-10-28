@@ -1,0 +1,2 @@
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: pybind11 in /opt/conda/lib/python3.11/site-packages (3.0.1)

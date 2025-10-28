@@ -1,6 +1,6 @@
 services:
   jupyter:
-    image: jupyter/base-notebook
+    image: jupyter/datascience-notebook
     container_name: mlflow-lab
     user: root   # important for passwordless sudo to be applied
     ports:
@@ -13,8 +13,7 @@ services:
       NB_GID: ${GID}
       GRANT_SUDO: "yes"
       JUPYTER_TOKEN: mlflow
-      JUPYTER_ENABLE_LAB: "yes"
-    shm_size: "8g"
+      JUPYTER_ENABLE_LAB: "yes"    
     
 
   mlflow:

@@ -7,3 +7,6 @@ __pycache__/
 .vscode/
 *.csv
 */logs/
+*.onnx
+mlflow:5000
+mlflows:5000
