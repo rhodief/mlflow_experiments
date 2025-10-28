@@ -72,6 +72,9 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-skl2onnx docker pandas scikit-learn mlflow requests}
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
+    # Docker registry credentials (set these in your environment or .env file)
+    AIRFLOW_VAR_DOCKER_REGISTRY_USERNAME: ${DOCKER_REGISTRY_USERNAME:-}
+    AIRFLOW_VAR_DOCKER_REGISTRY_PASSWORD: ${DOCKER_REGISTRY_PASSWORD:-}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs

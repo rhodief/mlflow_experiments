@@ -36,7 +36,7 @@ DOCKERFILE_PATH = "/opt/airflow/dags/ci-cd-completo/api/"
 ARTIFACTS_PATH = "/opt/airflow/dags/ci-cd-completo/api/artifacts/"
 MLFLOW_ADDRESS = "http://mlflow:5000/"
 
-@dag("dag_ci_cd", schedule=None, params={"nome_modelo": "aula-16-10-25", "tag_imagem": "hrchlhck/mlops-16-10"})
+@dag("dag_ci_cd", schedule=None, params={"nome_modelo": "aula-16-10-25", "tag_imagem": "lucianei/mlops-16-10"})
 def dag_ci_cd():
     @task
     def criar_experimento(**context):
@@ -250,7 +250,8 @@ def dag_ci_cd():
 
             username = Variable.get("docker_registry_username")
             password = Variable.get("docker_registry_password")
-
+            print('DEBUG: TAG', tag)
+            print('DEBUG: USERNAME', username)
             resposta = docker.api.push(tag, auth_config={'username': username, 'password': password}, stream=True, decode=True)
 
             for linha in resposta:
