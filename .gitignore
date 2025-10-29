@@ -10,3 +10,4 @@ __pycache__/
 *.onnx
 mlflow:5000
 mlflows:5000
+*.pkl
